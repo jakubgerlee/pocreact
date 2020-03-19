@@ -1,31 +1,18 @@
 import React from "react";
 
-// function Checkbox(props) {
-//   return (
-//     <div className="todo-item">
-//       <input
-//         className="checkbox"
-//         type="checkbox"
-//         defaultChecked={props.item.completed}
-//       />
-//       <p>{props.item.text}</p>
-//     </div>
-//   );
-// }
-
-class Checkbox extends React.Component {
+class TodoItem extends React.Component {
   render(props) {
     return (
         <div className="todo-item">
           <input
             className="checkbox"
             type="checkbox"
-            defaultChecked={props.item.completed}
+            defaultChecked={this.props.item.completed}
           />
-          <p>{props.item.text}</p>
+          <p>{this.props.item.text}</p>
         </div>
       );
   }
 }
 
-export default Checkbox;
+export default TodoItem;
