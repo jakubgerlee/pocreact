@@ -1,13 +1,14 @@
-import React from "react";
+import React, {Component} from 'react';
 
-class TodoItem extends React.Component {
+class TodoItem extends Component {
   render(props) {
     return (
         <div className="todo-item">
           <input
             className="checkbox"
             type="checkbox"
-            defaultChecked={this.props.item.completed}
+            checked={this.props.item.completed}
+            onChange={ () => this.props.handleChange(this.props.item.id)}
           />
           <p>{this.props.item.text}</p>
         </div>
